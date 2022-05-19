@@ -1,0 +1,77 @@
+*{
+    font-family: arial;
+}
+ 
+body{
+    background-image: linear-gradient(to right,#041e42, #4c2882,#ff2400 );
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex;
+}
+ 
+h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+ 
+.container{
+    background-color: whitesmoke;
+   /* border: 2px solid #000;
+    margin: auto;
+    width: 500px;
+    padding: 10px;*/
+}
+ 
+form{
+    padding: 20px;
+    margin: 10px 25px 50px 25px;
+    display: block;
+}
+ 
+.button{
+    border-radius: 3px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    padding: 8px 10px;
+    margin: 4px 2px;
+}
+ 
+.button1{
+    background-color: white;
+    color: black;
+    border: 2px solid #041e42;
+}
+ 
+.button2{
+    background-color: white;
+    color:black;
+    border: 2px solid #ff2400;
+}
+/*
+.button3{
+    background-color: white;
+    color: black;
+    border: 2px solid #041e42;
+}
+*/
+.button1:hover{
+    background-color: #041e42;
+    color: white;
+}
+ 
+.button2:hover{
+    background-color: #ff2400;
+    color: white;
+}
+/*
+.button3:hover{
+    background-color: #041e42;
+    color: white;
+ 
+}
+*/
