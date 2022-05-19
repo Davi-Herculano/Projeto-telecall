@@ -3,11 +3,13 @@
 }
  
 body{
-    background-image: linear-gradient(to right,#041e42, #4c2882,#ff2400 );
+    background-image: linear-gradient(to right,#004a7a, #4c2882,#c70224 );
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     display: flex;
+    line-height: 1.4;
+
 }
  
 h3{
