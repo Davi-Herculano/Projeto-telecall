@@ -10,7 +10,7 @@
     <h3>Formulário de Cadastro</h3>
     <form name="form" action="#" method="post">
         <label for="nome">Nome: </label>
-        <input type="text" id="nome"></br>
+        <input type="text" id="nome" minlength="15" maxlength="60"></br>
         <label for="nasc">Data de Nascimento: </label>
         <input type="date" id="nasc"></br>
         <label for="sexo">Sexo: </label>
@@ -21,9 +21,9 @@
         <label for="cpf">CPF: </label>
         <input type="text" id="cpf"></br>
         <label for="celular">Telefone Celular: </label>
-        <input type="text" id="celular"></br>
+        <input type="number" id="celular" placeholder="(+55)XX-XXXXXXXX"></br>
         <label for="telefone">Telefone Fixo: </label>
-        <input type="text" id="telefone">
+        <input type="number" id="telefone" placeholder="(+55)XX-XXXXXXXX">
     </form>
     <h3>Cadastro de Login</h3>
     <form name="form" action="#" method="post">
