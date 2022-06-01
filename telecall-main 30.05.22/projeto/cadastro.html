@@ -14,21 +14,19 @@
         <label for="nasc">Data de Nascimento: </label>
         <input type="date" id="nasc"></br>
         <label for="sexo">Sexo: </label>
-        <input type="radio" name="sexo">masculino
-        <input type="radio" name="sexo">feminino</br>
+        <select id="sexo">
+            <option value="deflt"></option>
+            <option value="masc">Masculino</option>
+            <option value="fem">Feminino</option>
+        </select></br>
         <label for="mae">Nome da mãe: </label>
         <input type="text" id="mae"></br>
         <label for="cpf">CPF: </label>
         <input type="text" id="cpf"></br>
         <label for="celular">Telefone Celular: </label>
-        <input type="tel" id="celular" placeholder="(+55)XX-XXXXXXXX"></br>
+        <input type="tel" id="celular" ></br>
         <label for="telefone">Telefone Fixo: </label>
-        <input type="tel" id="telefone" placeholder="(+55)XX-XXXXXXXX">
-
-    <h3>Cadastro de Login</h3>
-    <form name="form" action="#" method="post">
-        <label>Digite o usuário: </label>
-        <input type="text" id="usuario" minlength="6" maxlength="6"></br>
+        <input type="tel" id="telefone" ></br>
         <label>Senha: </label>
         <input type="password" id="senha" minlength="8" maxlength="14"></br>
         <label>Confirma senha: </label>
