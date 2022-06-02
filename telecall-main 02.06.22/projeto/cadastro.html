@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro</title>
+        <link href="estilos/cadastro.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="estilos/telecall.css" type="text/css">
+    </head>
+    <body>
+<div class="container">
+    <h3>Formulário de Cadastro</h3>
+    <form name="form" action="#" method="post">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" minlength="15" maxlength="60"></br>
+            <p></p>
+            <label for="nasc">Data de Nascimento: </label>
+            <input type="date" id="nasc"></br>
+            <p></p>
+            <label for="sexo">Sexo: </label>
+            <p></p>
+            <input type="radio" name="sexo">masculino
+            <input type="radio" name="sexo">feminino</br>
+            <p></p>
+            <label for="mae">Nome da mãe: </label>
+            <input type="text" id="mae"></br>
+            <p></p>
+            <label for="cpf">CPF: </label>
+            <input type="text" maxlength="11" id="cpf"></br>
+            <p></p>
+            <label for="celular">Telefone Celular: </label>
+            <input type="tel" id="celular" maxlength="13" placeholder="(+55)XX-XXXXXXXX"></br>
+            <p></p>
+            <label for="telefone">Telefone Fixo: </label>
+            <input type="tel" id="telefone" maxlength="12" placeholder="(+55)XX-XXXXXXXX">
+    
+    <p></p>    
+    <h3>Cadastro de Login</h3>
+    <form name="form" action="#" method="post">
+            <label>Digite o usuário: </label>
+            <input type="text" id="usuario" minlength="6" maxlength="6"></br>
+            <label>Senha: </label>
+            <input type="password" id="senha" minlength="8" maxlength="14"></br>
+            <label>Confirma senha: </label>
+            <input type="password" id="senha"></br>
+            <input type="submit" class="button button1" value="Confirmar">
+            <input type="reset" class="button button2" value="Cancelar">    
+    </form>
+</div>
+    </body>
+</html>
