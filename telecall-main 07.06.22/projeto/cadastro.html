@@ -5,11 +5,12 @@
         <title>Cadastro</title>
         <link href="estilos/cadastro.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="estilos/telecall.css" type="text/css">
+        <script type="text/Javascript" src="script/cadastro.js" ></script>
     </head>
     <body>
 <div class="container">
     <h3>Formulário de Cadastro</h3>
-    <form name="form" action="#" method="post">
+    <form name="form" action="#" method="post" onsubmit="return validarLogin();">
             <label for="nome">Nome: </label>
             <input type="text" id="nome" minlength="15" maxlength="60"></br>
             <p></p>
@@ -37,11 +38,11 @@
     <h3>Cadastro de Login</h3>
     <form name="form" action="#" method="post">
             <label>Digite o usuário: </label>
-            <input type="text" id="usuario" minlength="6" maxlength="6"></br>
+            <input type="text" id="usuario" minlength="6" maxlength="6" title="Deve ter exatamente 6 caracteres."></br>
             <label>Senha: </label>
-            <input type="password" id="senha" minlength="8" maxlength="14"></br>
+            <input type="password" id="senha" minlength="8" maxlength="14" title="Deve ter, no minimo, 8 caracteres."></br>
             <label>Confirma senha: </label>
-            <input type="password" id="senha"></br>
+            <input type="password" id="senhac"></br>
             <input type="submit" class="button button1" value="Confirmar">
             <input type="reset" class="button button2" value="Cancelar">    
     </form>

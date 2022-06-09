@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, inicial-scale=1.0">
         <title>Pagina Login</title>
         <link href="estilos/telecall.css" rel="stylesheet" type="text/css">
+        <script type="text/Javascript" src="script/login.js"></script>
     </head>
     <body>
 
@@ -15,7 +16,7 @@
         <div class="container">
 
         <section>    
-            <form action="#" method="post">
+            <form action="#" method="post" onsubmit="return validarDados();">
 
                 <legend><b>SEJA BEM VINDO</b></legend>
                 <p></p>
@@ -24,11 +25,11 @@
                     <legend>Área de Acesso</legend>
 
                         <label for="fname">LOGIN</label>
-                            <input class="alinhamento-direita" type="text" size="10" maxlength="8" placeholder="Digite seu login"></br>
+                            <input class="alinhamento-direita" id="fname" type="text" size="10" maxlength="8" placeholder="Digite seu login"></br>
                         <P></P>
 
                         <label for="fsenha">SENHA</label>
-                            <input class="alinhamento-direita" type="password" size="10" maxlength="8" id="senha" placeholder="Digite sua senha"></br>    
+                            <input class="alinhamento-direita" id="fsenha" type="password" size="10" maxlength="8" id="senha" placeholder="Digite sua senha"></br>    
                         <p></p>
 
                     <div id="enter">
