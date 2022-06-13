@@ -26,7 +26,7 @@ section {
     /* espaco ao redor do conteudo
     30px sup e inf
     5px esq e dir. */
-    padding: 5px 5px;
+    padding: 1px 1px;
 
     /* arredondar cantos. */
     border-radius: 10px;
@@ -35,7 +35,8 @@ section {
     box-shadow: 5px 5px 15px;
 
     /* tam max elemento. */
-    max-width: 70vh;
+    max-width: 50vh;
+    height: 250px;
 }
 
 
