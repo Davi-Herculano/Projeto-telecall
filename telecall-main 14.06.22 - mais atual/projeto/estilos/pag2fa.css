@@ -1,0 +1,64 @@
+@charset "UTF-8"
+
+@import url(<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">);
+
+body{
+    flex-direction: column;
+    background-image: linear-gradient(to right, whitesmoke,#e4e6ee,#6db8eb);
+    text-align:left;
+}
+
+p {
+    text-align:center
+}
+
+.inline-block-centralizado {
+    text-align: center;
+}
+
+.inline-block-centralizado div {
+    display: inline-block;
+    text-align: left;
+}
+
+#imgnote1 {
+    /*img note1 c legenda */
+    position:relative;
+    padding-right: 0%;
+    text-align:justify
+}
+
+#local1 {
+    /*logo localizador */
+    position: relative;
+    padding-right: 0%;
+    text-align:justify;
+}
+
+#cell1 {
+    /*logo celular */
+    position: relative;
+    padding-left: 0% ;
+    text-align:justify;
+    margin: 0 auto;
+}
+
+#imgnote2 {
+    /* logo note 2 */
+    position: relative;
+    padding-left: 0%;
+    text-align:justify;
+}
+
+#imglogo {
+    /*logo da telecall. */
+    position:fixed;
+    bottom: 15px;
+    left: 40px;
+    padding-left: 90%;
+    text-align:left;
+}
+
+p{
+    text-align: justify;
+}
