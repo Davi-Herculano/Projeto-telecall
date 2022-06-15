@@ -9,6 +9,8 @@
       }
 }
 
+TROCAR MAXLENGHT DOS INPUTS
+
 function validarTelefone() {
     var telefone = document.getElementById("telefone");
     var telpadrao = /^(?:()(?:+)[0-9]{2}(?:))\s?[0-9]{2}\s?[0-9]{4,5}\s?[0-9]{4}$/  
@@ -19,9 +21,42 @@ function validarTelefone() {
         return false;
     }
  
-    PADRÃO DE TELEFONE E CELULAR =  /^(?:()(?:+)[0-9]{2}(?:))\s?[0-9]{2}\s?[0-9]{4,5}\s?[0-9]{4}$/ 
-
+    PADRÃO DE TELEFONE E CELULAR =  ^(?:\()(?:\+)[0-9]{2}(?:\))\s?[0-9]{2}\s?[0-9]{4,5}\s?[0-9]{4}$
+                                    ^(?:\()(?:\+)[0-9]{2}(?:\))\s?[0-9]{2}(\s?|\-)[0-9]{4,5}\s?[0-9]{4}$
+                            
+    PADRÃO DE CPF IDEAL = ^([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})$
 } */
+
+function validarCel(){
+    let telvalue = document.getElementById("celular").value;
+    let re = /^(?:\()(?:\+)[0-9]{2}(?:\))\s?[0-9]{2}(\s?|\-)[0-9]{5}(\s?|\-)[0-9]{4}$/;
+    if (! re.test(telvalue)){
+        alert('Número de celular invalido')
+        return false;
+    }
+    return true;
+}
+
+function validarTel(){
+    let telvalue = document.getElementById("telefone").value;
+    let re = /^(?:\()(?:\+)[0-9]{2}(?:\))\s?[0-9]{2}(\s?|\-)[0-9]{4}(\s?|\-)[0-9]{4}$/;
+    if (! re.test(telvalue)){
+        alert('Número de telefone invalido')
+        return false;
+    }
+    return true;
+}
+
+
+function validarCPF(){
+    let cpfvalue = document.getElementById("cpf").value;
+    let re = /^([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})$/;
+    if (! re.test(cpfvalue)) {
+        alert('CPF inválido')
+        return false;
+    } 
+    return true;
+}
 
 function validarLogin() {
     if (document.getElementById("nome").value == null || document.getElementById("nome").value == ""){
@@ -42,11 +77,9 @@ function validarLogin() {
         return false;
     }
 
-    if (document.getElementById("cpf").value == null || document.getElementById("cpf").value == ""){
-        alert("CPF não pode ficar em branco");
-        document.getElementById("cpf").focus;
-        return false;
-    }
+    validarCPF();
+    validarCel();
+    validarTel();
 
     if (document.getElementById("senha").value == null || document.getElementById("senha").value == ""){
         alert("Senha não pode ficar em branco");
