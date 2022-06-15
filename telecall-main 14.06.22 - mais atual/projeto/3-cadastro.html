@@ -1,51 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cadastro</title>
-        <link href="estilos/cadastro.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="estilos/telecall.css" type="text/css">
-        <script type="text/Javascript" src="script/cadastro.js" ></script>
+       <!-- <link rel="stylesheet" type="text/css" href="estilos/telecall.css">-->
+       <link href="estilos/todos.css" rel="stylesheet" type="text/css">
+       <link href="estilos/cadastro.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </head>
     <body>
-<div class="container">
-    <h3>Formulário de Cadastro</h3>
-    <form name="form" action="#" method="post" onsubmit="return validarLogin();">
-            <label for="nome">Nome: </label>
-            <input type="text" id="nome" minlength="15" maxlength="60"></br>
-            <p></p>
-            <label for="nasc">Data de Nascimento: </label>
-            <input type="date" id="nasc"></br>
-            <p></p>
-            <label for="sexo">Sexo: </label>
-            <p></p>
-            <input type="radio" name="sexo">masculino
-            <input type="radio" name="sexo">feminino</br>
-            <p></p>
-            <label for="mae">Nome da mãe: </label>
-            <input type="text" id="mae"></br>
-            <p></p>
-            <label for="cpf">CPF: </label>
-            <input type="text" maxlength="11" id="cpf"></br>
-            <p></p>
-            <label for="celular">Telefone Celular: </label>
-            <input type="tel" id="celular" maxlength="13" placeholder="(+55)XX-XXXXXXXX"></br>
-            <p></p>
-            <label for="telefone">Telefone Fixo: </label>
-            <input type="tel" id="telefone" maxlength="12" placeholder="(+55)XX-XXXXXXXX">
-    
-    <p></p>    
-    <h3>Cadastro de Login</h3>
-    <form name="form" action="#" method="post">
-            <label>Digite o usuário: </label>
-            <input type="text" id="usuario" minlength="6" maxlength="6" title="Deve ter exatamente 6 caracteres."></br>
-            <label>Senha: </label>
-            <input type="password" id="senha" minlength="8" maxlength="14" title="Deve ter, no minimo, 8 caracteres."></br>
-            <label>Confirma senha: </label>
-            <input type="password" id="senhac"></br>
-            <input type="submit" class="button button1" value="Confirmar">
-            <input type="reset" class="button button2" value="Cancelar">    
-    </form>
-</div>
+        <img id="imgmodavo" src="img/modavologo2.png" width="200"/>
+        <div class="container w-70 p-5">
+            <h3>Formulário de Cadastro</h3>
+            <form name="form" method="post" action="#" onsubmit="validarLogin()">
+                <div class="form-row">
+                    <div class="form-group col-xs-3 col-lg-5">
+                        <label for="cpf">CPF: </label>
+                        <input type="text" id="cpf" name="txtCpf" class="form-control" required pattern="^\d{3}.\d{3}.\d{3}-\d{2}$" title="Você deve utilizar este formato 'xxx.xxx.xxx-xx'">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-xs-3 col-lg-7">
+                        <label for="nome">Nome: </label>
+                        <input type="text" id="nome" name="txtNome" class="form-control" required placeholder="Digite o seu nome">
+                    </div>
+                    <div class="form-group col-xs-2 col-lg-3">
+                        <label for="nasc">Data de Nascimento: </label>
+                        <input type="date" id="nasc" name="txtNasc" class="form-control" required="true">
+                    </div>
+                </div>
+                <div class="form-row">Sexo: </div> 
+                    <div class="form-row">
+                        <div class="form-radio-inline">
+                            <input type="radio" class="form-radio-input" id="sexo" name="optSexo"><label class="form-radio-label" for="sexo">masculino</label>
+                        </div>
+                        <div class="form-radio-inline">
+                            <input type="radio" class="form-radio-input" id="sexo" name="optSexo"><label class="form-radio-label" for="sexo">feminino</label>
+                        </div>
+                    </div>
+                <div class="form-row">
+                    <div class="form-group col-xs-3 col-lg-4">
+                        <label for="end">Endereço: </label>
+                        <input type="text" id="end" name="txtEnd" class="form-control">
+                    </div>
+                    <div class="form-group col-xs-1 col-lg-1">
+                        <label for="num">N°: </label>
+                        <input type="text" id="num" name="txtNum" class="form-control">
+                    </div>
+                    <div class="form-group col-xs-1 col-lg-2">
+                        <label for="compl">Complemento: </label>
+                        <input type="text" id="compl" name="txtCompl" class="form-control">
+                    </div>
+                    <div class="form-group col-xs-2 col-lg-3">
+                        <label for="cidade">Cidade: </label>
+                        <input type="text" id="cidade" name="txtCidade" class="form-control">
+                    </div>
+                </div>    
+                 <div class="form-row">
+                    <div class="form-group col-xs-3 col-lg-7">
+                        <label for="mae">Nome materno: </label>
+                        <input type="text" id="mae" name="txtMae" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-xs-2 col-lg-3">
+                        <label for="celular">Telefone Celular: </label>
+                        <input type="text" id="celular" name="txtCelular" class="form-control">
+                    </div>
+                    <div class="form-group col-xs-4 col-lg-3">
+                        <label for="fixo">Telefone Fixo: </label>
+                        <input type="text" id="fixo" name="txtFixo" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-xs-5 col-lg-3">
+                        <label for="senha">Digite uma senha: </label>
+                        <input type="text" id="senha" name="txtSenha" class="form-control" required="true">
+                    </div>
+                    <div class="form-group col-xs-5 col-lg-3">
+                        <label for="senha1">Repita a senha: </label>
+                        <input type="text" id="senha1" name="txtSenha" class="form-control" required="true">
+                    </div>
+                </div>
+                </form>
+                <div class="form-row">
+                    <input type="submit" value="Confirmar" class="button button1">
+                    <input type="reset" value="Cancelar" class="button button2">
+                </div>
+            </form>
+        </div>
+<script src="javascript/funcao.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script></body></html>
+
     </body>
 </html>
+      
