@@ -12,6 +12,7 @@ body{
     font-family: "ubuntu", sans-serif;
     flex-direction: column;
     background-image: linear-gradient(to right, whitesmoke,#e4e6ee,#6db8eb);
+    background-repeat: no-repeat;
     text-align:left;
 }
 
