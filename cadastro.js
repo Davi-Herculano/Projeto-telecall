@@ -74,7 +74,7 @@ function guardarDados(){
 
 
 function redirecionar(){
-    window.location.replace("https://www.google.com.br/");
+    window.location.replace("2-login.html");
 
 }
 
