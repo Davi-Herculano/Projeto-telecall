@@ -1,0 +1,69 @@
+@charset "UTF-8"
+
+@import url(<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">);
+
+body{
+    flex-direction: column;
+    background-image: linear-gradient(to right, whitesmoke,#e4e6ee,#6db8eb);
+    text-align:left;
+}
+
+#graficopesq {
+    /* logo pizza pesq */
+    position:relative;
+    padding-right: 70%;
+    text-align: right;
+}
+
+#cell2 {
+    /* img telefones */
+    position:relative;
+    padding-right: 70%;
+    text-align: right;
+}
+
+#cell3 {
+    /* img telefone c mao */
+    position:relative;
+    padding-right: 70%;
+    text-align: right;
+    border-radius: 10px;
+}
+
+#telefonista {
+    /* logo telefonista */
+    position: relative;
+    padding-right: 90%;
+    text-align:right;
+}
+
+#engrenagens {
+    /*logo engrenagem */
+    position: relative;
+    padding-right: 90%;
+    text-align:right;
+}
+
+#cell1 {
+    /*logo celular */
+    position: relative;
+    padding-left: 0% ;
+    text-align:justify;
+}
+
+#servicos {
+    /* logo servicos final */
+    position: relative;
+    padding-left: 0% ;
+    text-align:justify;
+    border-radius: 10px;
+}
+
+#imglogo {
+    /*logo da telecall. */
+    position:fixed;
+    bottom: 15px;
+    left: 40px;
+    padding-left: 90%;
+    text-align:left;
+}
